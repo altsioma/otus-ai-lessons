@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "dev-helper": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "-e",
+        "const fs=require('node:fs'),path=require('node:path'),url=require('node:url');for(let dir=process.cwd();;dir=path.dirname(dir)){if(fs.existsSync(path.join(dir,'.mcp.json'))){const entry=path.join(dir,'dist','main.js');if(!fs.existsSync(entry)){console.error('dev-helper: '+entry+' not found; run npm ci && npm run build in '+dir);process.exit(1)}import(url.pathToFileURL(entry).href);break}if(path.dirname(dir)===dir){console.error('dev-helper: no .mcp.json above '+process.cwd());process.exit(1)}}"
+      ],
+      "env": {
+        "LOG_FILE": "logs/mcp-server.log"
+      }
+    }
+  }
+}
