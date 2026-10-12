@@ -1,0 +1,32 @@
+{
+  "name": "langchain-task-agent",
+  "version": "0.1.0",
+  "description": "Минимальный AI-агент на LangChain.js — натурально-языковая обёртка над локальным HTTP API задач",
+  "private": true,
+  "type": "module",
+  "main": "main.js",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "start": "node main.js",
+    "agent": "node main.js",
+    "api": "node src/api/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "node scripts/check-syntax.js",
+    "demo:tools": "node scripts/demo-tools.js",
+    "prompts:md": "node scripts/generate-prompts-md.js",
+    "eval:agent": "node scripts/evaluate-agent.js"
+  },
+  "dependencies": {
+    "@langchain/ollama": "^1.3.0",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "langchain": "^1.5.15",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.11"
+  }
+}
