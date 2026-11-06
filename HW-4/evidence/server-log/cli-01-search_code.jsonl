@@ -1,0 +1,1 @@
+{"ts":"2026-10-12T17:31:27.719Z","level":"info","event":"tool_call","callId":"0bb172d4-f626-4557-a8c9-633fd2ae1026","tool":"search_code","args":{"query":"applyDiscount","path":".","extensions":[".ts",".tsx",".js",".mjs",".json",".md"],"caseSensitive":true,"maxResults":100},"status":"success","durationMs":18}
